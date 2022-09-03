@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  php:
+    build:
+      context: docker/php
+      dockerfile: Dockerfile
+      args:
+        USER_IDENTIFIER: 1000
+        USER_GROUP_IDENTIFIER: 1000
+    tty: true
+    volumes:
+      - .:/home/user
+
+  composer:
+    build:
+      context: docker/composer
+      dockerfile: Dockerfile
+      args:
+        USER_IDENTIFIER: 1000
+        USER_GROUP_IDENTIFIER: 1000
+        COMPOSER_VERSION: 2.4.1
+    tty: true
+    volumes:
+      - .:/home/user
