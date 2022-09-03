@@ -1,15 +1,27 @@
 {
-    "require-dev": {
-        "pestphp/pest": "^1.22"
-    },
-    "config": {
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
-    },
-    "autoload": {
-      "psr-4": {
-        "Aminnairi\\StringExtra\\": "./sources/"
-      }
+  "name": "aminnairi/string-extra",
+  "type": "library",
+  "description": "Extra utilities for working with strings in PHP.",
+  "homepage": "https://github.com/aminnairi/php-string-extra",
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "string",
+    "extra"
+  ],
+  "require": {
+    "php": ">=8.0.0"
+  },
+  "require-dev": {
+    "pestphp/pest": "^1.22"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
     }
+  },
+  "autoload": {
+    "psr-4": {
+      "Aminnairi\\StringExtra\\": "./sources/"
+    }
+  }
 }
